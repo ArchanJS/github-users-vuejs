@@ -1,5 +1,6 @@
 <script>
 export default{
+    name:'Card',
     props:{
         id:Number,
         username:String,
@@ -15,7 +16,7 @@ export default{
         <div class="card-body">
             <h1 class="details">Username: {{ username }}</h1>
             <h1 class="details">ID: {{ id }}</h1>
-            <a :href="url" target="_blank" class="card-link">Check profile</a>
+            <router-link :to="{name:'Profile',params:{username:username}}" class="card-link">Check profile</router-link>
         </div>
     </div>
 </template>
@@ -27,7 +28,7 @@ export default{
 }
 .card-container{
     height: 120px;
-    width: 400px;
+    width: 350px;
     border: 2px solid black;
     display: flex;
     flex-direction: row;

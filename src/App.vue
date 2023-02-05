@@ -1,19 +1,9 @@
-<script setup>
-import Home from './components/Home.vue'
+<script>
+export default{
+  name:'App'
+}
 </script>
 
 <template>
-  <header>
-
-    <div class="wrapper">
-      <Home/>
-    </div>
-  </header>
-
+  <router-view></router-view>
 </template>
-
-<style scoped>
-.blue{
-  color: blueviolet;
-}
-</style>
